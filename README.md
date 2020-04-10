@@ -1,6 +1,16 @@
-# Project Title
 
-One Paragraph of project description goes here
+
+### Programming Assignment 1 - The ARITH language:
+
+In Haskell, or the language of your choice, write an interpreter for the ARITH language. Your program should consist of:
+
+* A data structure for the abstract syntax tree (AST) of ARITH.
+* A parser for ARITH.  You may use external libraries when writing the parser. Remember to cite any code that you take from elsewhere.
+* Do NOT use regular expressions to parse the string. The ARITH language is simple enough that this would work, but you will still have to worry about precedence. It may be helpful to parse the String into an AST and think about how the AST should be interpreted. You will be asked to write more complicated parsers later in the quarter. Please take the time to learn how to use a real parsing library.
+In HW1, you may assume that there will be exactly one space between numbers and operands, as in the provided test cases. (This assumption will not be true in future homework.)
+An interpreter for this AST.  The interpreter should be in the form of a function called eval, which takes in an AST and returns the result.
+Test cases which show that your AST, parser, and interpreter work.  These test cases should show good code coverage (i.e. test all cases).
+Finally, add a feature to your language, like subtraction or exponentiation.  This addition will involve modifying the AST, parser, and interpreter to support this new feature. You should also write new tests for this feature.
 
 ## Getting Started
 
@@ -8,13 +18,26 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+
+Need Python3 installed
+* There were some erros taht I faced using make file:
+   - pip needs to be installed
+   - Setting permission by **'chmod 777'** for all the files :
+    - bin/bats
+    - libexec/bats-core/bats
+    - libexec/bats-core/bats-exec-suite
+    - libexec/bats-core/bats-exec-test
+    - libexec/bats-core/bats-format-tap-stream
+    - libexec/bats-core/bats-preprocess
+    
 
 ```
 Give examples
 ```
 
-### Installing
+### Testing
+* After you met are done with the **prerequisites**
+* Test the code in terminal with **test.sh**, make sure that you are in the same directory as **test.sh**
 
 A step by step series of examples that tell you how to get a development env running
 
@@ -82,6 +105,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* https://www.youtube.com/watch?v=TastAWp8eIE
+
