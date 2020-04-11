@@ -3,15 +3,18 @@
 ### Programming Assignment 1 - The ARITH language: A Simple Langauge of
 ### Arithmetic Expressions ###
  ## Problem statement ##
-In Haskell, or the language of your choice, write an interpreter for the ARITH language. Your program should consist of:
+ write an interpreter for the ARITH language. Your program should consist of:
 
 * A data structure for the abstract syntax tree (AST) of ARITH.
-* A parser for ARITH.  You may use external libraries when writing the parser. Remember to cite any code that you take from elsewhere.
-* Do NOT use regular expressions to parse the string. The ARITH language is simple enough that this would work, but you will still have to worry about precedence. It may be helpful to parse the String into an AST and think about how the AST should be interpreted. You will be asked to write more complicated parsers later in the quarter. Please take the time to learn how to use a real parsing library.
-In HW1, you may assume that there will be exactly one space between numbers and operands, as in the provided test cases. (This assumption will not be true in future homework.)
-An interpreter for this AST.  The interpreter should be in the form of a function called eval, which takes in an AST and returns the result.
-Test cases which show that your AST, parser, and interpreter work.  These test cases should show good code coverage (i.e. test all cases).
-Finally, add a feature to your language, like subtraction or exponentiation.  This addition will involve modifying the AST, parser, and interpreter to support this new feature. You should also write new tests for this feature.
+* A parser for ARITH.  
+ you may assume that there will be exactly one space between numbers and operands, as in the provided test cases. 
+* An interpreter for this AST.  The interpreter should be in the form of a function called eval, which takes in an AST and returns the result.
+* Test cases which show that your AST, parser, and interpreter work.  
+
+
+As per the homework requirement, this script will do the following things:
+
+
 
 ## My implemenattion
 
@@ -28,6 +31,10 @@ I have implemnted ARITH interpretor in Python3. I have Added substraction featur
                     curr_node.right=new_node
                     curr_node=new_node
  - Then to evalute the AST , I used postorder traversal.
+ -The script gets inputs via stdin and output via stdout
+-The script parses the input into an Abstract Syntax Tree (AST)
+-The AST is evaulated in the interpreter and the script outputs the results.
+arith has three features, addition, multiplication and subtraction. Operations are applied to integers.
 ### Prerequisites
 
 
