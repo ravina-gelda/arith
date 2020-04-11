@@ -39,7 +39,7 @@ arith has three features, addition, multiplication and subtraction. Operations a
 
 
 Need Python3 installed
-* There were some erros taht I faced using make file:
+* There were some erros that I faced using make file:
    - pip needs to be installed
    - Setting permission by **'chmod 777'** for all the files :
        - bin/bats
