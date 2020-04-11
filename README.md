@@ -17,16 +17,17 @@ Finally, add a feature to your language, like subtraction or exponentiation.  Th
 
 I have implemnted ARITH interpretor in Python3. I have Added substraction feature to ARITH. In order to implement the interpretor, I have used precedence of the operators as " Multiplication > Addition > Substraction". Also, with the assumtions taht the input string will have operators separted by **whiletspace**, the parsing of the string becomes easy. Though it should not be difficult to change the code, if we don't want to assume this and parse the input string correctly. While creating AST I followed the below rules:
 - if current token is an number
-        -if the currect node is not + / - / * then put the number in the node
-        -else if current node is * then put the new node with the number to the right of the current node and the current node is changed to the parent of the * node
-        -else if current is + / - then put the new node with the integer on the right of the current node
+        * if the currect node is not + / - / * then put the number in the node
+        * else if current node is * then put the new node with the number to the right of the current node and the current node is changed to the parent of the * node
+        * else if current is + / - then put the new node with the integer on the right of the current node
 - If current token is + / -
-         - create a newnode with this token , and attach the current node to the left of this new node. And change the current node to this new node
+         * create a newnode with this token , and attach the current node to the left of this new node. And change the current node to this new node
 - If current token is *
-          - create a new node with this token:
+          * create a new node with this token:
           then new_node.left=curr_node.right
                     curr_node.right=new_node
                     curr_node=new_node
+ - Then to evalute the AST , I used postorder traversal.
 ### Prerequisites
 
 
